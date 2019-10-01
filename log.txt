@@ -1,0 +1,4 @@
+Oct 01, 2019 8:52:53 AM TeamScheduler.controller.LoginController onActionLogin
+INFO: Login succeeded for test.
+Oct 01, 2019 8:55:11 AM TeamScheduler.controller.LoginController onActionLogin
+INFO: Login succeeded for test.
