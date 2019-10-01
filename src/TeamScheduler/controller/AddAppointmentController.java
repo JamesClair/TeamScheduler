@@ -5,6 +5,7 @@
  */
 package TeamScheduler.controller;
 
+import TeamScheduler.Exceptions.BlankFieldException;
 import TeamScheduler.Exceptions.OverlappingApptException;
 import TeamScheduler.DAO.AppointmentDao;
 import TeamScheduler.DAO.CustomerDao;
@@ -127,15 +128,31 @@ public class AddAppointmentController implements Initializable {
 						+ "Please ensure any new appointments do NOT overlap.");
 				} 
 			}
+			
+			String title = titleTxt.getText();
+			String desc = descTxt.getText();
+			String location = locationTxt.getText();
+			String contact = contactTxt.getText();
+			String type = typeTxt.getText();
+			String url = urlTxt.getText();
+			
+			if(title.isEmpty()) {throw new BlankFieldException("title");}
+			if(desc.isEmpty()) {throw new BlankFieldException("desc");}
+			if(location.isEmpty()) {throw new BlankFieldException("location");}
+			if(contact.isEmpty()) {throw new BlankFieldException("contact");}
+			if(type.isEmpty()) {throw new BlankFieldException("type");}
+			if(url.isEmpty()) {throw new BlankFieldException("url");}
 
+
+			
 			Appointment appt = new Appointment(
 				customerDao.getId(customerChoice.getValue()),
-				titleTxt.getText(),
-				descTxt.getText(),
-				locationTxt.getText(),
-				contactTxt.getText(),
-				typeTxt.getText(),
-				urlTxt.getText(),
+				title,
+				desc,
+				location,
+				contact,
+				type,
+				url,
 				startLdt.format(dtf),
 				endLdt.format(dtf)
 			);
@@ -145,7 +162,7 @@ public class AddAppointmentController implements Initializable {
 			scene = FXMLLoader.load(getClass().getResource("/TeamScheduler/view/MainMenu.fxml"));
 			stage.setScene(new Scene(scene));
 			stage.show();
-		} catch (NumberFormatException | NullPointerException | OutsideHoursException | OverlappingApptException ex) {
+		} catch ( IndexOutOfBoundsException | NumberFormatException | NullPointerException | OutsideHoursException | OverlappingApptException | BlankFieldException ex) {
 			Alert alert = new Alert(Alert.AlertType.ERROR);
 			alert.setHeaderText("Error: unable to save new appointment!");
 			alert.setContentText("Unable to save!  All fields must have an appropriate value.  "
