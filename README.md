@@ -82,9 +82,21 @@ Each report is contained in it's own view and tableview.  For the optional repor
 ![Image of customer appts report](https://trello-attachments.s3.amazonaws.com/5c44b3e3573060864433706c/5d601d99a2f58d88a8e37ef3/f93da0d08e0f0cd580f109140501b5c5/image.png)
 
 
-
 **J.   Provide the ability to track user activity by recording timestamps for user log-ins in a .txt file. Each new record should be appended to the log file, if the file already exists.**
 
 All successful and failed login attempts are logged in the UserLoginController and output to a file relative to the root project folder called log.txt.
 ![Image of customer appts report](https://trello-attachments.s3.amazonaws.com/5c44b3e3573060864433706c/5d601d99a2f58d88a8e37ef3/fcb3765974750367a618e7e2819bb50e/image.png)
 
+
+
+
+Planned Improvements:
+-----
+
+- Protect sql inserts from duplicate entries.  
+- Encrypt persisted passwords in db.
+- Create denormalized views from the db and move city, country, and address to Customer class and customer, user, appt to an appt class.  This would reduce the number of queries used just to view and create data.
+- Restrict ability to create an appt with an End Date before the Start Date.
+- The factory classes while are NOT a pure factory design pattern and I purposely bypass this in a few controller methods(This was to showcase more than one implementation of data retrieval and manipulation).  This was meant to showcase abstracting the complicated creation of customer and appointment objects from the caller.  Reducing the complexity of object creation by introducing more specific CRUD operations.  That way instead of retrieving the full customer object every time a value is needed, the value can be retrieved from the DB.
+- Protect the singleton Environment from thread/access conflicts.  Right now all operations on the singleton are performed serially, but not at the same time so there isn't much chance of a lock, however best practice and any growth of the application could increase that risk.
+-Better exception handling.  Several IO and SQL operations would benefit from more detailed exception messages helping determine which CRUD operations were being performed if the stack trace isn't obvious.
