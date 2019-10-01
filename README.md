@@ -20,7 +20,7 @@ Adding new customers and Appointments
 ![Image of add customers](https://trello-attachments.s3.amazonaws.com/5c44b3e3573060864433706c/5d601d99a2f58d88a8e37ef3/cc84c4d431262a2969e4069c77d3ec37/image.png)
 ![Image of add appts](https://trello-attachments.s3.amazonaws.com/5c44b3e3573060864433706c/5d601d99a2f58d88a8e37ef3/bd46b022d76f18e555a899b52a2a1f24/image.png)
 
-Identical views are used for the Modification of customer and appt records, the main difference being that when modifying the selected object on the MainMenu is passed and used to populate the fields for modification by the user.
+Identical views are used for the Modification of customer and appt records, when modifying, the selected appt/customer on the MainMenu is passed and used to populate the fields for modification by the user.
 
 **D.   Provide the ability to view the calendar by month and by week.**
 
@@ -39,7 +39,7 @@ The MainMenu Appointments tableview can be filtered to show only appts that are 
 
 **F.   Write exception controls to prevent each of the following. You may use the same mechanism of exception control more than once, but you must incorporate at least  two different mechanisms of exception control.**
 
-Below is a screenshot of each alert the user will see when an exception is reached.  I used custom exceptions to add more detail and accuracy to each of the exceptions, as well as reuse them or alter the exception details using a constructor.  
+Below is a screenshot of each alert the user will see when an exception is reached.  I used custom exceptions in a separate package to add more detail and accuracy to each of the exceptions, as well as reuse them or alter the exception details.  I use both throws/throw and try/catch mechanisms for exception control.  
 
 •   scheduling an appointment outside business hours
 
@@ -59,24 +59,32 @@ Below is a screenshot of each alert the user will see when an exception is reach
 
 
 **G.  Write two or more lambda expressions to make your program more efficient, justifying the use of each lambda expression with an in-line comment.**
+ Both lamda expressions are in the MainMenuController along with in-line justifications.  They are tagged with "Requirement Lambda #(1|2)"
+ 
  
 **H.   Write code to provide an alert if there is an appointment within 15 minutes of the user’s log-in.**
 
+Upon successful login the user will be notified with the following alert if any appts are in the next 15 minutes with the customer and start time.
 
+![Image of appt notification](https://trello-attachments.s3.amazonaws.com/5c44b3e3573060864433706c/5d601d99a2f58d88a8e37ef3/53ecfc4ab4737d4a3c501fa1b0599d5b/image.png)
 
 **I.   Provide the ability to generate each  of the following reports:**
 
+Each report is contained in it's own view and tableview.  For the optional report I chose to present how many appts each customer had.  Screenshots of each below.
+
 •   number of appointment types by month
+![Image of appt type report](https://trello-attachments.s3.amazonaws.com/5c44b3e3573060864433706c/5d601d99a2f58d88a8e37ef3/ffede1a9e8daf4f7699574f2ab6505c6/image.png)
 
 •   the schedule for each consultant
+![Image of team schedule](https://trello-attachments.s3.amazonaws.com/5c44b3e3573060864433706c/5d601d99a2f58d88a8e37ef3/6ca23b0f1f9a2941f6c65c0fa2c3019f/image.png)
 
 •   one additional report of your choice
+![Image of customer appts report](https://trello-attachments.s3.amazonaws.com/5c44b3e3573060864433706c/5d601d99a2f58d88a8e37ef3/f93da0d08e0f0cd580f109140501b5c5/image.png)
 
 
 
 **J.   Provide the ability to track user activity by recording timestamps for user log-ins in a .txt file. Each new record should be appended to the log file, if the file already exists.**
 
-
-
-**K. Demonstrate professional communication in the content and presentation of your submission.**
+All successful and failed login attempts are logged in the UserLoginController and output to a file relative to the root project folder called log.txt.
+![Image of customer appts report](https://trello-attachments.s3.amazonaws.com/5c44b3e3573060864433706c/5d601d99a2f58d88a8e37ef3/fcb3765974750367a618e7e2819bb50e/image.png)
 
