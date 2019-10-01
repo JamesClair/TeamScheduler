@@ -2,3 +2,21 @@ Oct 01, 2019 8:52:53 AM TeamScheduler.controller.LoginController onActionLogin
 INFO: Login succeeded for test.
 Oct 01, 2019 8:55:11 AM TeamScheduler.controller.LoginController onActionLogin
 INFO: Login succeeded for test.
+oct 01, 2019 9:58:26 A.M. TeamScheduler.controller.LoginController onActionLogin
+INFORMACIÓN: Login succeeded for test.
+oct 01, 2019 10:00:04 A.M. TeamScheduler.controller.LoginController onActionLogin
+GRAVE: Login failed for test.
+Oct 01, 2019 10:10:33 AM TeamScheduler.controller.LoginController onActionLogin
+INFO: Login succeeded for test.
+Oct 01, 2019 10:28:05 AM TeamScheduler.controller.LoginController onActionLogin
+INFO: Login succeeded for test.
+Oct 01, 2019 11:50:14 AM TeamScheduler.controller.LoginController onActionLogin
+INFO: Login succeeded for test.
+Oct 01, 2019 11:54:31 AM TeamScheduler.controller.LoginController onActionLogin
+INFO: Login succeeded for test.
+Oct 01, 2019 11:55:05 AM TeamScheduler.controller.LoginController onActionLogin
+SEVERE: Login failed for test.
+Oct 01, 2019 12:05:10 PM TeamScheduler.controller.LoginController onActionLogin
+INFO: Login succeeded for test.
+Oct 01, 2019 12:06:49 PM TeamScheduler.controller.LoginController onActionLogin
+INFO: Login succeeded for test.

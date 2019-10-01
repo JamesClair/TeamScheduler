@@ -121,13 +121,11 @@ public class AddAppointmentController implements Initializable {
 			for (Appointment appt : apptDao.getAll()) {
 				LocalDateTime apptStartLdt = LocalDateTime.parse(appt.getStart(), dtf);
 				LocalDateTime apptEndLdt = LocalDateTime.parse(appt.getEnd(), dtf);
-				if (((startLdt.isAfter(apptStartLdt))
-					&& (startLdt.isBefore(apptEndLdt)))
-					|| ((endLdt.isAfter(apptStartLdt)
-					&& endLdt.isBefore(apptEndLdt)))) {
+				if ((startLdt.isBefore(apptEndLdt)
+					&& apptStartLdt.isBefore(endLdt))) {
 					throw new OverlappingApptException("Appointment overlaps another appointment.  "
 						+ "Please ensure any new appointments do NOT overlap.");
-				}
+				} 
 			}
 
 			Appointment appt = new Appointment(

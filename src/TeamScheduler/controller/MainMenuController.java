@@ -126,7 +126,7 @@ public class MainMenuController implements Initializable {
 	@FXML
 	private void onActionMonthRBtn(ActionEvent event) throws SQLException {
 		
- 	        LocalDateTime oneMonthAgo = now.minusMonths(1);
+ 	        LocalDateTime oneMonthFromNow = now.plusMonths(1);
  	        FilteredList<Appointment> filteredData = new FilteredList<>(apptDao.getAll());
  	        
 		/**
@@ -137,8 +137,8 @@ public class MainMenuController implements Initializable {
 		filteredData.setPredicate(row -> {
  	        	LocalDateTime apptStart = LocalDateTime.parse(row.getStart(), dtf);
  	        	LocalDateTime apptEnd = LocalDateTime.parse(row.getEnd(), dtf);
- 	        	return (apptStart.isAfter(oneMonthAgo) && apptStart.isBefore(now)) 
-				|| (apptEnd.isAfter(oneMonthAgo) && apptEnd.isBefore(now));
+ 	        	return (apptStart.isBefore(oneMonthFromNow) && apptStart.isAfter(now)) 
+				|| (apptEnd.isBefore(oneMonthFromNow) && apptEnd.isAfter(now));
  	        });
 
  	        apptTableView.setItems(filteredData);
@@ -146,14 +146,14 @@ public class MainMenuController implements Initializable {
 
 	@FXML
 	private void onActionWeekRBtn(ActionEvent event) throws SQLException {
- 	        LocalDateTime oneWeekAgo = now.minusDays(7);
+ 	        LocalDateTime oneWeekFromNow = now.plusDays(7);
  	        FilteredList<Appointment> filteredData = new FilteredList<>(apptDao.getAll());
  	        
 		filteredData.setPredicate(row -> {
  	        	LocalDateTime apptStart = LocalDateTime.parse(row.getStart(), dtf);
  	        	LocalDateTime apptEnd = LocalDateTime.parse(row.getEnd(), dtf);
- 	        	return (apptStart.isAfter(oneWeekAgo) && apptStart.isBefore(now)) 
-				|| (apptEnd.isAfter(oneWeekAgo) && apptEnd.isBefore(now));
+ 	        	return (apptStart.isBefore(oneWeekFromNow) && apptStart.isAfter(now)) 
+				|| (apptEnd.isBefore(oneWeekFromNow) && apptEnd.isAfter(now));
  	        });
 
  	        apptTableView.setItems(filteredData);
