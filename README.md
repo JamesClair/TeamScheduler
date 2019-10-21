@@ -94,12 +94,15 @@ Upon successful login the user will be notified with the following alert if any 
 Each report is contained in it's own view and tableview. 
 
 •   number of appointment types by month
+
 <img src="https://trello-attachments.s3.amazonaws.com/5c44b3e3573060864433706c/5d601d99a2f58d88a8e37ef3/ffede1a9e8daf4f7699574f2ab6505c6/image.png" width="600">
 
 •   the schedule for each consultant
+
 <img src="https://trello-attachments.s3.amazonaws.com/5c44b3e3573060864433706c/5d601d99a2f58d88a8e37ef3/6ca23b0f1f9a2941f6c65c0fa2c3019f/image.png" width="600">
 
 •   one additional report of your choice
+
 <img src="https://trello-attachments.s3.amazonaws.com/5c44b3e3573060864433706c/5d601d99a2f58d88a8e37ef3/f93da0d08e0f0cd580f109140501b5c5/image.png" width="600">
 
 
