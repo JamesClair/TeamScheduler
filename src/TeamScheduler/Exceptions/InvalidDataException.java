@@ -9,10 +9,10 @@ package TeamScheduler.Exceptions;
  *
  * @author james.clair
  */
-public class BlankFieldException extends Exception {
+public class InvalidDataException extends Exception {
 
-	public BlankFieldException(String message) {
-		super("The following field was left blank: " + message);
+	public InvalidDataException(String message) {
+		super(message);
 	}
 	
 }

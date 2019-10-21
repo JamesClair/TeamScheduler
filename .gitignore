@@ -33,5 +33,9 @@ dist/
 nbdist/
 .nb-gradle/
 
+# TeamScheduler runtime log files
 log.txt
 log.txt*
+
+# mac
+.DS_Store
