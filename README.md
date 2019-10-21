@@ -3,6 +3,19 @@ TeamScheduler is an application I created for my B.S. in Computer Science.  The 
 
 The scenario specified requirements for an extendable application that a global service team could use for scheduling, tracking and reporting of customer appointments.
 
+## Pre-Requisites:
+Java 8
+MySql 5.5.62
+
+String members for DATABASENAME, DB_URL, USERNAME, and PASSWORD in the DBConnection class will need to be updated according to the sql instance you are connecting to:
+	`
+	private static final String DATABASENAME = "db_name";
+	private static final String DB_URL = "jdbc:mysql://localhost/" + DATABASENAME;
+	private static final String USERNAME = "user_name";
+	private static final String PASSWORD = "password";
+        private static final String DRIVER = "com.mysql.jdbc.Driver";
+	`
+
 ## Design:
 A combination of the DAO and MVC design pattern were chosen to create the main structure of the program.  
 
@@ -14,14 +27,12 @@ The DAO serves as an abstraction layer between the database and Java data object
 
 The MVC implementation was used to organize and abstract the Java objects in model, away from the view.  This is done by using controller methods that are called when certain user actions are performed on the view as an interface to the model.
 
-**The overall dataflow through the program:** When a user action on the view calls an associated controller method that in turn instantiates a DAO used to return a list of model objects and these are then displayed or updated on the view.
-
-*NOTE: *
+**The overall data flow through the program:** When a user action on the view calls an associated controller method that in turn instantiates a DAO used to return a list of model objects and these are then displayed or updated on the view.
 
 **Other Patterns:**
 
 - Factory Pattern is introduced when creating customer objects, however other model objects have not had this pattern implemented yet(see planned improvements).  This pattern helps the caller by providing an interface for creating objects especially if they are immutable.
-- Singlton Pattern was implemented in order to share and restrict the copies of the hosts session information like the user across the program.  It also ensures the object is only created once(after user login).  Access to the singleton object is not syncronized to support concurrency(See planned improvements).
+- Singleton Pattern was implemented in order to share and restrict the copies of the hosts session information like the user across the program.  It also ensures the object is only created once(after user login).  Access to the singleton object is not synchronized to support concurrency(See planned improvements).
 - JavaFX resource bundles are used to allow for easy addition of new language files and extending support for internationalization.
 - Application specific exception handling is done using extended exception classes.  This pattern was established after most of the project was completed and should be followed to allow for code reuse and organization.
 
@@ -30,7 +41,7 @@ The MVC implementation was used to organize and abstract the Java objects in mod
 
 **Internationalization:**
 
-The Log-in form can determine the user’s location and translate log-in and error control messages by using the current locale and a resource bundle in the LoginController class.  If your locale indicates you are in a spanish speaking country the login, success, and failure windows will , success, and failure windows translate the text for the user.
+The Log-in form can determine the user’s location and translate log-in and error control messages by using the current locale and a resource bundle in the LoginController class.  If your locale indicates you are in a Spanish speaking country the login, success, and failure windows will , success, and failure windows translate the text for the user.
 
   <img src="https://trello-attachments.s3.amazonaws.com/5d601d99a2f58d88a8e37ef3/1034x716/e1a97d614514374f6f33ae1a3d6554e0/image.png" width="600">
   <img src="https://trello-attachments.s3.amazonaws.com/5c44b3e3573060864433706c/5d601d99a2f58d88a8e37ef3/e95de6a0e2e490cfe040e00c53012efe/image.png" width="400">
@@ -135,6 +146,6 @@ If you have any questions about this repo or the TeamScheduler application pleas
 ## Contributing
 Closed
 
-##Authors and Acknowledgement:
-
+##Acknowledgement:
 Sierra, K. (2018). OCP Java SE 8 Programmer II Exam Guide (Exam 1Z0-809). Retrieved from <a href="http://search.ebscohost.com.wgu.idm.oclc.org/login.aspx?direct=true&db=edsssb&AN=edsssb.bks000142597&site=eds-live&scope=site">http://search.ebscohost.com.wgu.idm.oclc.org/login.aspx?direct=true&db=edsssb&AN=edsssb.bks000142597&site=eds-live&scope=site</a>
+

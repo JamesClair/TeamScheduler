@@ -14,10 +14,10 @@ import java.sql.SQLException;
  * @author james.clair
  */
 public class DBConnection {
-	private static final String DATABASENAME = "U05BNo";
-	private static final String DB_URL = "jdbc:mysql://52.206.157.109/" + DATABASENAME;
-	private static final String USERNAME = "U05BNo";
-	private static final String PASSWORD = "53688453415";
+	private static final String DATABASENAME = "db_name";
+	private static final String DB_URL = "jdbc:mysql://localhost/" + DATABASENAME;
+	private static final String USERNAME = "user_name";
+	private static final String PASSWORD = "password";
         private static final String DRIVER = "com.mysql.jdbc.Driver";
 	public static Connection conn;
 
