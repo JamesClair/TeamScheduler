@@ -98,7 +98,7 @@ public class MainMenuController implements Initializable {
 			
 			apptTableView.setItems(apptDao.getAll());
 			/**
-			 * Requirement Lambda #2: This Lambda was introduced after originally using PropertyValueFactory object
+			 * This Lambda was introduced after originally using PropertyValueFactory object
 			 * created from the Appointment class "start" member.  The lambda uses the callback functional interface
 			 * to take a Callback object taking a CellDataFeatures<Appointment, String> object (cellData) and returning 
 			 * an ObservableValue<String>>().  The ReadOnlyStringWrapper is used to provide an accessible string property
@@ -130,7 +130,7 @@ public class MainMenuController implements Initializable {
  	        FilteredList<Appointment> filteredData = new FilteredList<>(apptDao.getAll());
  	        
 		/**
-		 * Requirement Lambda #1: This lambda uses the Predicate functional interface to create a test for whether a row/object
+		 * This lambda uses the Predicate functional interface to create a test for whether a row/object
 		 * in the filteredData list has a start time between oneMonthAgo and now.  Each row that returns true is 
 		 * added to the newly filtered filteredData list.
 		 */
