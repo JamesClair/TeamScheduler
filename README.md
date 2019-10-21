@@ -4,10 +4,9 @@ TeamScheduler is an application I created for my B.S. in Computer Science.  The 
 The scenario specified requirements for an extendable application that a global service team could use for scheduling, tracking and reporting of customer appointments.
 
 ## Pre-Requisites:
-Java 8
-MySql 5.5.62
-
-String members for DATABASENAME, DB_URL, USERNAME, and PASSWORD in the DBConnection class will need to be updated according to the sql instance you are connecting to:
+- Java 8
+- MySql 5.5.62
+- String members for DATABASENAME, DB_URL, USERNAME, and PASSWORD in the DBConnection class will need to be updated according to the sql instance you are connecting to:
 	`
 	private static final String DATABASENAME = "db_name";
 	private static final String DB_URL = "jdbc:mysql://localhost/" + DATABASENAME;
