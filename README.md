@@ -118,6 +118,7 @@ Planned Improvements:
 -----
 **Note: Planned Improvements may never be implemented.  This project is NOT being actively maintained other than for portfolio purposes.**
 
+- Write Unit and Integration tests
 - Protect sql inserts from duplicate entries.  
 - Encrypt persisted passwords in db.
 - Create denormalized views from the db and move city, country, and address to Customer class and customer, user, appt to an appt class.  This would reduce the number of queries used just to view and create data.
