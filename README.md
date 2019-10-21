@@ -125,8 +125,7 @@ All successful and failed login attempts are logged in the UserLoginController a
 
 
 
-Planned Improvements:
------
+## Planned Improvements:
 **Note: Planned Improvements may never be implemented.  This project is NOT being actively maintained other than for portfolio purposes.**
 
 - Write Unit and Integration tests
@@ -146,6 +145,6 @@ If you have any questions about this repo or the TeamScheduler application pleas
 ## Contributing
 Closed
 
-##Acknowledgement:
+## Acknowledgement
 Sierra, K. (2018). OCP Java SE 8 Programmer II Exam Guide (Exam 1Z0-809). Retrieved from <a href="http://search.ebscohost.com.wgu.idm.oclc.org/login.aspx?direct=true&db=edsssb&AN=edsssb.bks000142597&site=eds-live&scope=site">http://search.ebscohost.com.wgu.idm.oclc.org/login.aspx?direct=true&db=edsssb&AN=edsssb.bks000142597&site=eds-live&scope=site</a>
 
