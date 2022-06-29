@@ -18,7 +18,7 @@ The scenario specified requirements for an extendable application that a global 
 ## Design:
 A combination of the DAO and MVC design pattern were chosen to create the main structure of the program.  
 
-<img src="https://trello-attachments.s3.amazonaws.com/5c44b3e3573060864433706c/5da0c9e731f66c1af3141080/ca97aa5387d29974b94c2b0f27462786/image.png">
+![image](https://trello-attachments.s3.amazonaws.com/5c44b3e3573060864433706c/5da0c9e731f66c1af3141080/ca97aa5387d29974b94c2b0f27462786/image.png)
 
 The DAO serves as an abstraction layer between the database and Java data objects found in the model.  When a list of appointments is needed a new DAO object can be instantiated and used to access and return a new list of Java objects one for each row in the database.  The Dao API is implemented by all each object's DAO classes enabling a standard set of CRUD operations.  This makes it easy to extend the applications schema and create new DAOs quickly and uniformally.  
 
