@@ -1,7 +1,7 @@
 # TeamScheduler
 TeamScheduler is an application I created for my B.S. in Computer Science.  The project was meant to demonstrate competency in object oriented patterns, lambda functional programming, SQL/JDBC integration, encapsulation, abstraction, exception handling, APIs, Internationalization/Localization and JAVA.   
 
-The scenario specified requirements for an extendable application that a global service team could use for scheduling, tracking and reporting of customer appointments.
+TeamScheduler is an extendable application that a global service team could use for scheduling, tracking and reporting of customer appointments.
 
 ## Pre-Requisites:
 - Java 8
